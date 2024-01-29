@@ -9,12 +9,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "router",
+						"name": "functionsRouterContract",
 						"type": "address"
 					},
 					{
 						"internalType": "bytes32",
-						"name": "donId",
+						"name": "functionsDONid",
 						"type": "bytes32"
 					}
 				],
@@ -255,17 +255,25 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint64",
-						"name": "subscriptionId",
-						"type": "uint64"
-					},
-					{
 						"internalType": "string",
 						"name": "javascriptCode",
 						"type": "string"
 					}
 				],
-				"name": "setRequest",
+				"name": "setJavascriptCode",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint64",
+						"name": "subscriptionId",
+						"type": "uint64"
+					}
+				],
+				"name": "setSubscriptionId",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -287,6 +295,12 @@
 		"devdoc": {
 			"kind": "dev",
 			"methods": {
+				"constructor": {
+					"params": {
+						"functionsDONid": "Bytes32 value representing the Functions DON ID (find this at https://functions.chain.link/)",
+						"functionsRouterContract": "Address of the Functions router contract for the current network (find this at https://functions.chain.link/)"
+					}
+				},
 				"handleOracleFulfillment(bytes32,bytes,bytes)": {
 					"details": "Either response or error parameter will be set, but never both.",
 					"params": {
@@ -298,6 +312,16 @@
 				"sendRequest(string[])": {
 					"params": {
 						"args": "Array of string arguments passed into the source code which are accessible via the global variable `args`"
+					}
+				},
+				"setJavascriptCode(string)": {
+					"params": {
+						"javascriptCode": "Javascript source code to be executed during Functions requests"
+					}
+				},
+				"setSubscriptionId(uint64)": {
+					"params": {
+						"subscriptionId": "Functions subscription ID"
 					}
 				}
 			},
@@ -318,6 +342,12 @@
 				},
 				"sendRequest(string[])": {
 					"notice": "Triggers an on-demand Functions request"
+				},
+				"setJavascriptCode(string)": {
+					"notice": "Sets the Functions request Javascript source code"
+				},
+				"setSubscriptionId(uint64)": {
+					"notice": "Sets the Functions subscription ID used to pay for requests"
 				},
 				"transferOwnership(address)": {
 					"notice": "Allows an owner to begin transferring ownership to a new address, pending."
@@ -431,11 +461,11 @@
 			]
 		},
 		"contracts/FunctionsConsumer.sol": {
-			"keccak256": "0x753904a4f68aa368d3361e3bc361b7d2d3c699e1c5f9e98ede2406724d81fc80",
+			"keccak256": "0xd22496e8c6eef2b7aa30ac7fa9ac59e955b425bf68f9455fe1a28ecbf080b20e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e794886820dd78f742dbc1b015121d9561676338920d85af3dee229d8a3439e9",
-				"dweb:/ipfs/Qmc6EgWogdwgbypnAzWjHji2mbJTopD58m4ZttiB53qu4u"
+				"bzz-raw://45701f4082eb08356855542ce345322d718c538e92534d6e3b80ca45a2a24c19",
+				"dweb:/ipfs/QmQU2fWopfbRRQRrVZie86NCvzWZGgRU4xVoNgC3mDXBfK"
 			]
 		}
 	},

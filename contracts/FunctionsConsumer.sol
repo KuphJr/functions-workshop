@@ -15,7 +15,7 @@ contract FunctionsConsumer is FunctionsClient, ConfirmedOwner {
 
   bytes32 public s_donId; // DON ID for the Functions DON to which the requests are sent
 
-  string public s_javascriptCode; // JavaScript code which will be executed during Functions request
+  string public s_javascriptCode; // Javascript code which will be executed during Functions request
   uint64 public s_subscriptionId; // Functions subscription ID used to pay for requests
 
   bytes32 public s_lastSentRequestId; // Functions request ID of the latest request
@@ -23,13 +23,28 @@ contract FunctionsConsumer is FunctionsClient, ConfirmedOwner {
   bytes public s_lastResponse; // Latest Functions response represented as raw bytes
   string public s_lastError; // Latest Functions request error message
 
-  constructor(address router, bytes32 donId) FunctionsClient(router) ConfirmedOwner(msg.sender) {
-    s_donId = donId;
+  /**
+   * @param functionsRouterContract Address of the Functions router contract for the current network (find this at https://functions.chain.link/)
+    * @param functionsDONid Bytes32 value representing the Functions DON ID (find this at https://functions.chain.link/)
+   */
+  constructor(address functionsRouterContract, bytes32 functionsDONid) FunctionsClient(functionsRouterContract) ConfirmedOwner(msg.sender) {
+    s_donId = functionsDONid;
   }
 
-  function setRequest(uint64 subscriptionId, string calldata javascriptCode) external onlyOwner {
-    s_javascriptCode = javascriptCode;
+  /**
+   * @notice Sets the Functions subscription ID used to pay for requests
+   * @param subscriptionId Functions subscription ID
+   */
+  function setSubscriptionId(uint64 subscriptionId) external onlyOwner {
     s_subscriptionId = subscriptionId;
+  }
+
+  /**
+   * @notice Sets the Functions request Javascript source code
+   * @param javascriptCode Javascript source code to be executed during Functions requests
+   */
+  function setJavascriptCode(string calldata javascriptCode) external onlyOwner {
+    s_javascriptCode = javascriptCode;
   }
 
   /**
@@ -48,7 +63,7 @@ contract FunctionsConsumer is FunctionsClient, ConfirmedOwner {
   /**
    * @notice Store latest result/error
    * @param requestId The request ID, returned by sendRequest()
-   * @param response Aggregated response from the JavaScript code
+   * @param response Aggregated response from the Javascript code
    * @param err Aggregated error from the JavaScript code or from the execution pipeline
    * Either response or error parameter will be set, but never both
    */
