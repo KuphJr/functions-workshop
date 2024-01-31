@@ -23,7 +23,7 @@ You can follow this tutorial on all testnet chains which Functions currently sup
 
 ## Phase 2 Prerequisites
 
-For Pase 2, you must have [Node.js](https://nodejs.org/en) and a text or code editor installed.
+For Pase 2, you must have [Node.js](https://nodejs.org/en) installed.
 Additionally, you can also install [Deno](https://deno.com/) for local simulation (optional).
 
 You also must aquire an API token from 
