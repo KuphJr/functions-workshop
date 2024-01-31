@@ -19,8 +19,8 @@ You can follow this tutorial on all testnet chains which Functions currently sup
 6. Set the subscription ID via Remix using `setSubscriptionId`
 7. Set the JavaScript code string for the Functions request using `setJavascriptCode` using code from [this example](https://functions.chain.link/playground/823d75ac-1ef6-4792-bbb5-e8f484733791)
 9. Send a Functions request using `sendRequest` and providing a city in the request arguments array (ex: `["New-York"]`)
-10. View the Functions request status from the Functions subscription page
-11. View the request response (or error) with Remix using `s_lastResponse` (or `s_lastError`)
+10. View the Functions request status from the Functions subscription page to see when it is fulfilled
+11. View the request response (or error) stored in your contract with Remix using `s_lastResponse` (or `s_lastError`)
 
 ## Phase 2 Prerequisites
 
