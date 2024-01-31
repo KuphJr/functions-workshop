@@ -20,6 +20,7 @@ You can follow this tutorial on all testnet chains which Functions currently sup
 7. Send a Functions request using `sendRequest` and providing a city in the request arguments array (ex: `["New-York"]`)
 8. View the Functions request status from the Functions subscription page to see when it is fulfilled
 9. View the request response (or error) stored in your contract with Remix using `s_lastResponse` (or `s_lastError`)
+10. Decode the response bytes hex string using a hex decoder tool such as [this](https://onlinetools.com/utf8/convert-hexadecimal-to-utf8)
 
 ## Phase 2 Prerequisites
 
