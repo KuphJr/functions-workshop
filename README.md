@@ -9,6 +9,10 @@ You can aquire testnet LINK and gas funds at [https://faucets.chain.link/](https
 You can follow this tutorial on all testnet chains which Functions currently supports:
 `Ethereum Sepolia`, `Polygon Mumbai`, `Avalanche Fuji`, or `Arbitrum Sepolia`
 
+## Phase 1 Instructions
+
+1. Load the /contract/FunctionsConsumer.sol Solidity contract into Remix using the Github URL 
+
 ## Phase 2 Prerequisites
 
 You must have Node.js and a code editor installed. Additionally, you can also install Deno for local simulation (optional).
