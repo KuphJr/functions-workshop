@@ -17,10 +17,10 @@ You can follow this tutorial on all testnet chains which Functions currently sup
 4. Deploy the contract to a testnet blockchain that Functions supports, providing the Functions router contract address and DON ID hex string for the given blockchain which can be found [here](https://docs.chain.link/chainlink-functions/supported-networks)
 5. Create a Chainlink Functions subscription at [https://functions.chain.link/](https://functions.chain.link/), add the Functions consumer contract address, and fund the subscription with LINK.
 6. Set the subscription ID via Remix using `setSubscriptionId`
-7. Set the JavaScript code for the Functions request using `setJavascriptCode`
-8. Send a Functions request using `sendRequest` and providing any necessary request arguments in the format `["myArgument1","myArgument2"]`
-9. View the Functions request status from the Functions subscription page
-10. View the request response (or error) with Remix using `s_lastResponse` (or `s_lastError`)
+7. Set the JavaScript code string for the Functions request using `setJavascriptCode` using code from [this example](https://functions.chain.link/playground/823d75ac-1ef6-4792-bbb5-e8f484733791)
+9. Send a Functions request using `sendRequest` and providing a city in the request arguments array (ex: `["New-York"]`)
+10. View the Functions request status from the Functions subscription page
+11. View the request response (or error) with Remix using `s_lastResponse` (or `s_lastError`)
 
 ## Phase 2 Prerequisites
 
