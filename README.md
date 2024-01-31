@@ -11,8 +11,11 @@ You can follow this tutorial on all testnet chains which Functions currently sup
 
 ## Phase 1 Instructions
 
-1. Load the /contract/FunctionsConsumer.sol Solidity contract into Remix using the Github URL `https://github.com/KuphJr/functions-workshop/blob/main/contracts/FunctionsConsumer.sol`
-2. Deploy the contract to a [testnet blockchain that Functions supports](https://docs.chain.link/chainlink-functions/supported-networks) (`Ethereum Sepolia`, `Polygon Mumbai`, `Avalanche Fuji`, or `Arbitrum Sepolia`)
+1. Open the Remix editor at [https://remix.ethereum.org/](https://remix.ethereum.org)
+2. Load the `/contract/FunctionsConsumer.sol` Solidity contract into Remix using the Github URL `https://github.com/KuphJr/functions-workshop/blob/main/contracts/FunctionsConsumer.sol`
+3. Deploy the contract to a [testnet blockchain that Functions supports](https://docs.chain.link/chainlink-functions/supported-networks) (`Ethereum Sepolia`, `Polygon Mumbai`, `Avalanche Fuji`, or `Arbitrum Sepolia`)
+4. Create a Chainlink Functions subscription at [https://functions.chain.link/](https://functions.chain.link/), add the Functions consumer contract address and fund the subscription with LINK.
+5. 
 
 ## Phase 2 Prerequisites
 
