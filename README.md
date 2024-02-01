@@ -27,13 +27,13 @@ You can follow this tutorial on all testnet chains which Functions currently sup
 For Pase 2, you must have [Node.js](https://nodejs.org/en) installed.
 Additionally, you can also install [Deno](https://deno.com/) for local simulation (optional).
 
-You also must aquire a soccer free trial API token from [https://sportsdata.io/](https://sportsdata.io/)
+You also must aquire an RPC URL for your desired blockchain from [https://www.infura.io](https://www.infura.io/) (or similar) and a soccer free trial API token from [https://sportsdata.io/](https://sportsdata.io/)
 
 ## Phase 2 Instructions
 
 1. Copy the JavaScript file `/scripts/encryptAndUploadSecrets.js` to a file on your local machine
 2. Modify the script for your given network as described in the comments
-3. Set the `PRIVATE_KEY` environment variable to the private key you used to create your Functions subscription and set the `API_KEY` environment variable to your API key
+3. Set the `PRIVATE_KEY` environment variable to the private key you used to create your Functions subscription, the `API_KEY` environment variable to your API key, and the `RPC_URL` environment variable to your RPC URL
 4. Run the script file with Node.js by running `node /path/to/your/file/encryptAndUpload.js`
 5. Set the resulting encrypted secrets hex string in your smart contract via Remix using `setEncryptedSecretsReference`
 6. Set the JavaScript code useing code from [this example](https://functions.chain.link/playground/1fcb4403-f340-4594-a63d-5a8f29d5bb96)
