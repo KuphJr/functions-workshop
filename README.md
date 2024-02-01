@@ -33,7 +33,7 @@ You also must aquire an RPC URL for your desired blockchain from [https://www.in
 
 1. Copy the JavaScript file `/encryptAndUploadSecrets.js` to a file on your local machine
 2. In the same directory as the JavaScript file, run `npm install ethers` and `npm install @chainlink/functions-toolkit`
-3. Modify the script for your given network as described in the comments
+3. Modify `encryptAndUploadSecrets.js` for your given network as described by the code comments
 4. Set the `PRIVATE_KEY` environment variable to the private key you used to create your Functions subscription, the `API_KEY` environment variable to your API key, and the `RPC_URL` environment variable to your RPC URL
 5. Run the script file with Node.js by running `node /path/to/your/file/encryptAndUpload.js`
 6. Set the resulting encrypted secrets hex string in your smart contract via Remix using `setEncryptedSecretsReference`
