@@ -36,5 +36,5 @@ You also must aquire an RPC URL for your desired blockchain from [https://www.in
 3. Set the `PRIVATE_KEY` environment variable to the private key you used to create your Functions subscription, the `API_KEY` environment variable to your API key, and the `RPC_URL` environment variable to your RPC URL
 4. Run the script file with Node.js by running `node /path/to/your/file/encryptAndUpload.js`
 5. Set the resulting encrypted secrets hex string in your smart contract via Remix using `setEncryptedSecretsReference`
-6. Set the JavaScript code using code from [this example](https://functions.chain.link/playground/1fcb4403-f340-4594-a63d-5a8f29d5bb96)
+6. Set the JavaScript code using code from [this example](https://functions.chain.link/playground/315e8a7b-774a-4bf8-b05a-ade30ca985dd)
 7. Send the request using the arguments (ex: `["2023-01-28", "VEN/GUA"]`)
