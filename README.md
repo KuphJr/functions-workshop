@@ -32,10 +32,11 @@ You also must aquire an RPC URL for your desired blockchain from [https://www.in
 ## Phase 2 Instructions
 
 1. Copy the JavaScript file `/encryptAndUploadSecrets.js` to a file on your local machine
-2. Modify the script for your given network as described in the comments
-3. Set the `PRIVATE_KEY` environment variable to the private key you used to create your Functions subscription, the `API_KEY` environment variable to your API key, and the `RPC_URL` environment variable to your RPC URL
-4. Run the script file with Node.js by running `node /path/to/your/file/encryptAndUpload.js`
-5. Set the resulting encrypted secrets hex string in your smart contract via Remix using `setEncryptedSecretsReference`
-6. Set the JavaScript code using code from [this example](https://functions.chain.link/playground/315e8a7b-774a-4bf8-b05a-ade30ca985dd)
-7. Send the request using the arguments (ex: `["2023-01-28", "VEN/GUA"]`) and observe the results similar to Phase 1
+2. In the same directory as the JavaScript file, run `npm install ethers` and `npm install @chainlink/functions-toolkit`
+3. Modify the script for your given network as described in the comments
+4. Set the `PRIVATE_KEY` environment variable to the private key you used to create your Functions subscription, the `API_KEY` environment variable to your API key, and the `RPC_URL` environment variable to your RPC URL
+5. Run the script file with Node.js by running `node /path/to/your/file/encryptAndUpload.js`
+6. Set the resulting encrypted secrets hex string in your smart contract via Remix using `setEncryptedSecretsReference`
+7. Set the JavaScript code using code from [this example](https://functions.chain.link/playground/315e8a7b-774a-4bf8-b05a-ade30ca985dd)
+8. Send the request using the arguments (ex: `["2023-01-28", "VEN/GUA"]`) and observe the results similar to Phase 1
 9. (Optional) The Functions Playground runs in your browser and does not perfectly represent the actual Functions execution environment used for on-chain requests. To simulate the source code on your local machine for better debugging, see the file `/simulateScript.js` (this requires Deno to be installed)
