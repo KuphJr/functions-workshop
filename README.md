@@ -37,4 +37,5 @@ You also must aquire an RPC URL for your desired blockchain from [https://www.in
 4. Run the script file with Node.js by running `node /path/to/your/file/encryptAndUpload.js`
 5. Set the resulting encrypted secrets hex string in your smart contract via Remix using `setEncryptedSecretsReference`
 6. Set the JavaScript code using code from [this example](https://functions.chain.link/playground/315e8a7b-774a-4bf8-b05a-ade30ca985dd)
-7. Send the request using the arguments (ex: `["2023-01-28", "VEN/GUA"]`)
+7. Send the request using the arguments (ex: `["2023-01-28", "VEN/GUA"]`) and observe the results similar to Phase 1
+9. (Optional) The Functions Playground runs in your browser and does not perfectly represent the actual Functions execution environment used for on-chain requests. To simulate the source code on your local machine for better debugging, see the file `/scripts/simulateScript.js` (this requires Deno to be installed)
