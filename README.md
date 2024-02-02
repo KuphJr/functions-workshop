@@ -32,7 +32,7 @@ You also must aquire an RPC URL for your desired blockchain from [www.infura.io]
 ## Phase 2 Instructions
 
 1. Copy the JavaScript file `/encryptAndUploadSecrets.js` to a file on your local machine
-2. In the same directory as the JavaScript file, run `npm install ethers` and `npm install @chainlink/functions-toolkit`
+2. In the same directory as the JavaScript file, run `npm install ethers@5.7.2` and `npm install @chainlink/functions-toolkit`
 3. Modify `encryptAndUploadSecrets.js` for your given network as described by the code comments
 4. Set the `PRIVATE_KEY` environment variable to the private key you used to create your Functions subscription, the `API_KEY` environment variable to your API key, and the `RPC_URL` environment variable to your RPC URL
 5. Run the script file with Node.js by running `node /path/to/your/file/encryptAndUpload.js`
