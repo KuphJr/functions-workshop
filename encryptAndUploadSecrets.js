@@ -1,4 +1,4 @@
-const ethers = require('ethers@5.7.2')
+const ethers = require('ethers')
 const { SecretsManager } = require('@chainlink/functions-toolkit')
 
 ;(async () => {
